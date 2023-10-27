@@ -6,8 +6,26 @@ ROBOTSTXT_OBEY = True
 
 BASE_DIR = Path(__file__).parent.parent
 RESULTS_FOLDER = 'results'
-# PEP_CSV = 'pep_%(time)s.csv'
 
+PEP_SPIDER_NAME = 'pep'
+PEP_SPIDER_DOMAIN = 'peps.python.org'
+PEP_SPIDER_URL = 'https://peps.python.org/'
+
+PEP_STATUSES = (
+    'Active',
+    'Accepted',
+    'Deferred',
+    'Draft',
+    'Final',
+    'Provisional',
+    'Rejected',
+    'Superseded',
+    'Withdrawn',
+)
+
+SUMMARY_FILE_NAME = 'status_summary_{}.csv'
+DATETIME_FORMAT = '%Y-%m-%d_%H-%M-%S'
+SUMMARY_HEADER = ('Статус', 'Количество')
 
 LOG_LEVEL = 'INFO'
 
